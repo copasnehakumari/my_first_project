@@ -5,96 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Form</title>
     <link rel="stylesheet" href="./style.css">
+
     <style>
-       
+/* ---------- GLOBAL ---------- */
 body {
-    font-family:'Arial', sans-serif;
-    background:linear-gradient(to right,#6a11ab, #00f2fe);
-   
-    justify-content:center;
-    align-items:center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #6a11ab, #00f2fe);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
-    margin:0;
 }
 
-/* CONTACT FORM */
+/* ---------- CONTACT FORM ---------- */
 .contact-form {
     background-color: rgb(186, 202, 231);
-    padding: 30px;
+    padding: 30px 40px;
+    max-width: 900px;
     margin: auto;
-    margin-top: 10px;
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    width: 350px;
-    max-width: 90%;
+    flex-wrap: wrap;
+    gap: 40px;
+    width: 300px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+
 }
 
-/* Heading */
 .contact-form h2 {
+    text-align: center;
     margin-bottom: 20px;
     color: #333;
-    text-align: center;
 }
 
-/* Input + Textarea */
 .contact-form label {
-    display: block;
-    margin-bottom: 5px;
     font-weight: bold;
-    color: #000;
+    margin-bottom: 5px;
+    display: block;
 }
 
 .contact-form input,
 .contact-form textarea {
     width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: border-box;
-    transition: border 0.3s;
+    transition: 0.3s ease;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
     border-color: #2575fc;
-    outline: none;
 }
 
-/* Button */
 .contact-form button {
     width: 100%;
     padding: 12px;
     background: #2575fc;
-    color: white;
     border: none;
+    color: white;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    transition: 0.3s;
 }
 
 .contact-form button:hover {
     background: #6a11cb;
 }
-
-/* -------- RESPONSIVE -------- */
-@media (max-width: 600px) {
-    body{
-        padding: 20px;
-    }
-    .contact-form {
-        width: 100%;
-        padding: 20px;
-    }
+.contactbox{
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
 
-</style>
 
+    </style>
 </head>
 <body>
-    
-   <!-- ========== NAVBAR ========== -->
+
+<!-- ---------- NAVBAR ---------- -->
 <nav class="navbar">
 
     <div class="logo"><img src="./Images/iti.jpg" alt=""></div>
@@ -111,45 +104,50 @@ body {
     </ul>
 </nav>
 
-    <form class="contact-form">
-        <h2>Contact Us</h2>
+<!-- ---------- CONTACT FORM ---------- -->
+<form class="contact-form">
+    
+    <h2>Contact Us</h2>
 
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Your name" required>
+    <label>Name</label>
+    <input type="text" placeholder="Your name" required>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Your email" required>
+    <label>Email</label>
+    <input type="email" placeholder="Your email" required>
 
-        <label for="subject">Subject</label>
-        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+    <label>Subject</label>
+    <input type="text" placeholder="Subject" required>
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+    <label>Message</label>
+    <textarea rows="5" placeholder="Your message" required></textarea>
 
-        <button type="submit">Send Message</button>
-    </form>
-    <!-- !-- ====================== FOOTER ====================== --> -->
+    <button type="submit">Send Message</button>
+
+</form>
+
+<!-- ---------- FOOTER ---------- -->
 <footer>
-<div class="footer">
-    <div class="footer-box">
-        <h2>CONTACT NO.</h2>
-        <p>1462857895</p>
-        <p>Email: reetasneha006@gmail.com</p>
-    </div>
+    <div class="footer">
 
-    <div class="footer-box">
-        <img src="./Images/SKN.jpg" class="footerimage">
-        <h2>DEVELOPED BY</h2>
-        <p>Sneha Kumari</p>
-    </div>
+        <div class="footer-box">
+            <h2>CONTACT NO.</h2>
+            <p>1462857895</p>
+            <p>Email: reetasneha006@gmail.com</p>
+        </div>
 
-    <div class="footer-box">
-        <h2>ADDRESS</h2>
-        <p>JS IIT PALHIPATTI</p>
-        
-        <p>VARANASI (U.P)</p>
+        <div class="footer-box">
+            <img src="./Images/SKN.jpg" class="footerimage">
+            <h2>DEVELOPED BY</h2>
+            <p>Sneha Kumari</p>
+        </div>
+
+        <div class="footer-box">
+            <h2>ADDRESS</h2>
+            <p>JS IIT PALHIPATTI</p>
+            <p>VARANASI (U.P)</p>
+        </div>
+
     </div>
-</div>
 </footer>
 
 </body>
