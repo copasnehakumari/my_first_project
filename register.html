@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Website</title>
+
+<link rel="stylesheet" href="./style.css">
+<style>
+/* ================================= RESET ================================ */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ================================= BODY ================================ */
+body{
+    background: linear-gradient(135deg,#6a11ab,#00f2fe);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* ================================= FORM SECTION ================================ */
+.form-box{
+    width:420px;
+    max-width:90%;
+    padding:30px;
+    border-radius:15px;
+    border:2px solid rgba(255,255,255,0.3);
+    backdrop-filter:blur(6px);
+    box-shadow:0px 8px 20px rgba(0,0,0,0.25);
+    animation:dropFade 0.8s ease;
+    margin:40px auto;
+    background: rgba(255,255,255,0.1);
+}
+
+@keyframes dropFade {
+    0%{opacity:0; transform:translateY(-30px);}
+    100%{opacity:1; transform:translateY(0);}
+}
+
+.form-box h1{
+    text-align:center;
+    color:white;
+    margin-bottom:25px;
+    font-size:28px;
+}
+
+/* Input Fields */
+.input-box{ margin-bottom:18px; }
+
+label{
+    font-weight:600;
+    display:block;
+    margin-bottom:6px;
+    color:white;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    border:2px solid black;
+    border-radius:8px;
+    font-size:15px;
+    background:rgba(255,255,255,0.2);
+    color:#fff;
+    transition:0.3s;
+}
+
+input::placeholder{ color: #f1f1f1; }
+
+input:focus{
+    border-color:#ffffff;
+    outline:none;
+    box-shadow:0 0 5px rgba(255,255,255,0.7);
+}
+
+/* Buttons */
+.button-box{text-align:center; margin-top:20px;}
+
+.submit, .reset{
+    width:130px;
+    padding:12px;
+    border:none;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    border-radius:8px;
+    transition:0.3s;
+    color:#fff;
+    margin:5px;
+}
+
+.submit{ background:#28a745; }
+.submit:hover{ background:#218838; transform:scale(1.05); }
+.reset{ background:#dc3545; }
+.reset:hover{ background:#c82333; transform:scale(1.05); }
+
+
+
+</style>
+</head>
+
+<body>
+
+<!-- ====================== NAVBAR ====================== -->
+<nav class="navbar">
+    <div class="logo"><img src="./Images/iti.jpg" alt=""></div>
+
+    <label for="menu-toggle" class="menu-btn">&#9776;</label>
+    <input type="checkbox" id="menu-toggle">
+
+    <ul class="nav-links">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="./login.html">Login</a></li>
+    </ul>
+</nav>
+
+<!-- ====================== FORM SECTION ====================== -->
+<div class="form-box">
+    <form>
+        <h1>Student Form</h1>
+
+        <div class="input-box">
+            <label>Name</label>
+            <input type="text" placeholder="Enter your name" required>
+        </div>
+
+        <div class="input-box">
+            <label>Father's Name</label>
+            <input type="text" placeholder="Enter your father's name" required>
+        </div>
+
+        <div class="input-box">
+            <label>Email ID</label>
+            <input type="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="input-box">
+            <label>Mobile No.</label>
+            <input type="number" placeholder="Enter your mobile number" required>
+        </div>
+
+        <div class="button-box">
+            <input type="submit" value="SUBMIT" class="submit">
+            <input type="reset" value="RESET" class="reset">
+        </div>
+    </form>
+</div>
+
+<!-- ====================== FOOTER ====================== -->
+<footer>
+<div class="footer">
+    <div class="footer-box">
+        <h2>CONTACT NO.</h2>
+        <p>1462857895</p>
+        <p>Email: reetasneha006@gmail.com</p>
+    </div>
+
+    <div class="footer-box">
+        <img src="./Images/SKN.jpg" class="footerimage">
+        <h2>DEVELOPED BY</h2>
+        <p>Sneha Kumari</p>
+    </div>
+
+    <div class="footer-box">
+        <h2>ADDRESS</h2>
+        <p>JS IIT PALHIPATTI</p>
+        
+        <p>VARANASI (U.P)</p>
+    </div>
+</div>
+</footer>
+
+</body>
+</html>
