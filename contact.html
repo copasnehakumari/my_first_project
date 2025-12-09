@@ -6,75 +6,91 @@
     <title>Contact Form</title>
     <link rel="stylesheet" href="./style.css">
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(to right,#6a11ab, #00f2fe);
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            white-space:normal;
-            
-        }
+       
+body {
+    font-family:'Arial', sans-serif;
+    background:linear-gradient(to right,#6a11ab, #00f2fe);
+   
+    justify-content:center;
+    align-items:center;
+    min-height: 100vh;
+    margin:0;
+}
 
-        .contact-form {
-           background: transparent;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-            width: 350px;
-            margin-left: 30%;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            background-color: rgb(186, 202, 231);
-        }
+/* CONTACT FORM */
+.contact-form {
+    background-color: rgb(186, 202, 231);
+    padding: 30px;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    width: 350px;
+    max-width: 90%;
+}
 
-        .contact-form h2 {
-            margin-bottom: 20px;
-            color: #333;
-            text-align: center;
-        }
+/* Heading */
+.contact-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
 
-        .contact-form label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold; /* Bold text */
-            color: #000;       /* Black color */
-        }
+/* Input + Textarea */
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #000;
+}
 
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
-            transition: border 0.3s;
-        }
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border 0.3s;
+}
 
-        .contact-form input:focus,
-        .contact-form textarea:focus {
-            border-color: #2575fc;
-            outline: none;
-        }
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #2575fc;
+    outline: none;
+}
 
-        .contact-form button {
-            width: 100%;
-            padding: 12px;
-            background: #2575fc;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: border 0.3s;
-        }
+/* Button */
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    background: #2575fc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
-        .contact-form button:hover {
-            background: #6a11cb;
-        }
-    </style>
+.contact-form button:hover {
+    background: #6a11cb;
+}
+
+/* -------- RESPONSIVE -------- */
+@media (max-width: 600px) {
+    body{
+        padding: 20px;
+    }
+    .contact-form {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+</style>
+
 </head>
 <body>
     
